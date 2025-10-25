@@ -208,3 +208,74 @@ section:hover {
   border-radius: 0.3em;
   padding: 0.3em 0.5em;
 }
+
+
+/* ---- Latest Projects styling ---- */
+.latest-projects article {
+  border: 1px solid var(--border-color, #ccc);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: var(--project-bg, rgba(0,0,0,0.03));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.latest-projects article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.latest-projects img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+}
+
+/* ---- GitHub Stats Card ---- */
+.github-stats {
+  margin-top: 2rem;
+  border: 1px solid var(--border-color, #ccc);
+  padding: 1.25rem;
+  border-radius: 10px;
+  max-width: 320px;
+  background: var(--project-bg, rgba(0,0,0,0.03));
+  text-align: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.github-stats:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.github-stats img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+
+/* Light & Dark mode binding */
+:root {
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --border-color: #444;
+    --project-bg: rgba(255,255,255,0.05);
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --border-color: #ccc;
+    --project-bg: rgba(0,0,0,0.03);
+  }
+}
+
+/* --- Latest Projects layout --- */
+.latest-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}

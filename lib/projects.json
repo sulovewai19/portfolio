@@ -1,0 +1,74 @@
+[
+  {
+    "title": "DSC 80 Data Exploration",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A data analysis project exploring patterns using Python and pandas."
+  },
+  {
+    "title": "Web Portfolio (DSC 106)",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A personal website built with HTML, CSS, and JavaScript to showcase my work."
+  },
+  {
+    "title": "Finance Tracker",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A budgeting prototype that helps track monthly expenses and visualize trends."
+  },
+  {
+    "title": "DSC 106 Expository Visualization",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A static visualization project explaining the health impact of processed foods."
+  },
+  {
+    "title": "DSC 106 Persuasive Visualization",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A persuasive visualization designed to highlight how data framing influences perception."
+  },
+  {
+    "title": "DSC 106 Interactive Visualization",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "An interactive visualization project allowing users to explore data dynamically."
+  },
+  {
+    "title": "MySQL Airline Delay Dashboard",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A dashboard using SQL queries to explore delay patterns across U.S. airports."
+  },
+  {
+    "title": "DSC 40B Algorithms Project",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Implemented core algorithms with complexity analysis in Python."
+  },
+  {
+    "title": "Python Web Scraper",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A scraper that collects and parses structured data from public websites."
+  },
+  {
+    "title": "Machine Learning Mini-Project",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A small ML model trained on real-world data with performance evaluation metrics."
+  },
+  {
+    "title": "Personal Budget Visualization",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A visualization prototype using charting libraries to display financial breakdowns."
+  },
+  {
+    "title": "Portfolio Enhancement (Ongoing)",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "An ongoing enhancement of the portfolio site with templated data and GitHub API integration."
+  }
+]
