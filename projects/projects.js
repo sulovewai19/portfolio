@@ -1,7 +1,12 @@
 import { fetchJSON, renderProjects } from '../global.js';
 
 async function loadProjects() {
-  const projects = await fetchJSON('../lib/projects.json');
+  const basePath =
+    window.location.hostname.includes('github.io')
+      ? '/portfolio/lib/projects.json'   
+      : '../lib/projects.json';          
+
+  const projects = await fetchJSON(basePath);
   if (!projects) return;
 
   const container = document.querySelector('.projects');
@@ -12,5 +17,3 @@ async function loadProjects() {
 }
 
 loadProjects();
-
-

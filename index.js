@@ -2,7 +2,13 @@ import { fetchJSON, renderProjects, fetchGitHubData } from './global.js';
 
 // ----- LOAD LATEST PROJECTS -----
 async function loadLatestProjects() {
-  const projects = await fetchJSON('./lib/projects.json');
+  // ✅ detect local vs GitHub Pages
+  const basePath =
+    window.location.hostname.includes('github.io')
+      ? '/portfolio/lib/projects.json'
+      : './lib/projects.json';
+
+  const projects = await fetchJSON(basePath);
   if (!projects) return;
 
   const latestThree = projects.slice(0, 3);
@@ -19,8 +25,11 @@ async function loadGitHubStats() {
   if (profileStats) {
     profileStats.innerHTML = `
       <div style="text-align:center;">
-        <img src="${githubData.avatar_url}" alt="${githubData.login}" style="width:120px; border-radius:50%; margin-bottom:10px;">
-        <p>👤 <strong>Username:</strong> <a href="${githubData.html_url}" target="_blank">${githubData.login}</a></p>
+        <img src="${githubData.avatar_url}" alt="${githubData.login}"
+          style="width:120px; border-radius:50%; margin-bottom:10px;">
+        <p>👤 <strong>Username:</strong>
+          <a href="${githubData.html_url}" target="_blank">${githubData.login}</a>
+        </p>
       </div>
       <dl style="margin-top:12px;">
         <dt>Public Repos:</dt><dd>${githubData.public_repos}</dd>
