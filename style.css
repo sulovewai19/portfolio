@@ -279,3 +279,82 @@ section:hover {
   gap: 1.2rem;
   margin-top: 1rem;
 }
+
+.year {
+  color: gray;
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  margin-top: 0.2em;
+}
+
+#projects-pie-plot {
+  max-width: 300px;
+  margin: 2em auto;
+  display: block;
+  overflow: visible;
+  background-color: #fafafa; 
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  border: 1px solid #ccc;
+  padding: 1em;
+  gap: 0.5em;
+  list-style: none;
+  margin: 0;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: var(--color);
+  border-radius: 4px;
+}
+
+.searchBar {
+  padding: 0.5em;
+  margin: 1em 0;
+  font-size: 1em;
+  width: 100%;
+  max-width: 400px;
+}
+
+path {
+  cursor: pointer;
+  transition: 300ms;
+}
+
+svg:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+.selected:is(path) {
+  fill: var(--color);
+}
+
+.selected:is(li) {
+  background-color: var(--color);
+  color: white;
+  border-radius: 6px;
+  padding: 0.2em 0.5em;
+}

@@ -2,7 +2,6 @@ import { fetchJSON, renderProjects, fetchGitHubData } from './global.js';
 
 // ----- LOAD LATEST PROJECTS -----
 async function loadLatestProjects() {
-  // ✅ detect local vs GitHub Pages
   const basePath =
     window.location.hostname.includes('github.io')
       ? '/portfolio/lib/projects.json'
