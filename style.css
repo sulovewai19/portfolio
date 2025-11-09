@@ -358,3 +358,55 @@ svg:has(path:hover) path:not(:hover) {
   border-radius: 6px;
   padding: 0.2em 0.5em;
 }
+
+/* ====== Tooltip Styling ====== */
+.tooltip {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 8px 12px;
+  font-size: 14px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  color: #333;
+  z-index: 10;
+}
+
+/* ====== Brush selection styling ====== */
+.selection {
+  fill-opacity: 0.1;
+  stroke: #ff6b6b;
+  stroke-opacity: 0.7;
+  stroke-width: 2;
+}
+
+/* ====== Selected bubbles ====== */
+circle.selected {
+  stroke: red;
+  stroke-width: 2px;
+}
+
+#selection-count {
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+#language-breakdown {
+  margin-top: 8px;
+}
+
+/* ====== Stats layout ====== */
+.stats {
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+.stats dt {
+  font-weight: bold;
+}
+.stats dd {
+  margin: 0 0 8px 0;
+}
+
