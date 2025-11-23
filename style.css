@@ -410,3 +410,351 @@ circle.selected {
   margin: 0 0 8px 0;
 }
 
+/* ===== Lab 8: Meta page styles ===== */
+
+/* Scatter + story layout */
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  align-items: flex-start;
+}
+
+#scatter-story {
+  flex: 1 1 260px;
+  max-width: 35rem;
+}
+
+#scatter-plot {
+  flex: 1 1 400px;
+  position: sticky;
+  top: 4rem;
+  align-self: flex-start;
+}
+
+.scrolly-intro {
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.step {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 800px) {
+  #scrolly-1 {
+    flex-direction: column;
+  }
+
+  #scatter-plot {
+    position: static;
+  }
+}
+
+/* Controls above scatterplot */
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+#commit-progress {
+  margin-left: 0.5rem;
+  flex: 1;
+}
+
+#commit-time {
+  margin-left: auto;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Stats panel */
+.stats {
+  margin: 0 0 1rem 0;
+}
+
+.stats dt {
+  font-weight: 600;
+  float: left;
+  clear: left;
+  margin-right: 0.35rem;
+}
+
+.stats dd {
+  margin: 0 0 0.25rem 0;
+}
+
+/* SVG / circles */
+#chart svg {
+  max-width: 100%;
+  height: auto;
+}
+
+#chart circle {
+  fill: steelblue;
+  fill-opacity: 0.8;
+  transition: cx 200ms ease, cy 200ms ease, r 200ms ease;
+}
+
+#chart circle.selected {
+  stroke: black;
+  stroke-width: 1.5px;
+}
+
+#chart circle {
+  @starting-style {
+    r: 0;
+  }
+}
+
+/* File unit visualization */
+#files {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 0.4rem 1rem;
+}
+
+#files > div.file {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+#files dt {
+  grid-column: 1;
+}
+
+#files dt code {
+  font-family: monospace;
+}
+
+#files dt code small {
+  display: block;
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+#files dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0.15em;
+  padding-top: 0.6em;
+  margin: 0;
+}
+
+.loc {
+  width: 0.5em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: steelblue; /* overridden by inline style in JS */
+}
+
+/* ===== Meta page (Lab 8) ===== */
+
+#stats-box {
+  background: #ffffff;
+  border: 1px solid #d5dce5;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: left;
+}
+
+.stat-item dt {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.stat-item dd {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0b4dbb;
+  margin: 0;
+}
+
+/* Scrollytelling layout */
+
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+#scatter-story {
+  flex: 1;
+  max-width: 36rem;
+}
+
+#scatter-story .step {
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+
+#scatter-story .step a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+#scatter-plot {
+  flex: 1;
+  position: sticky;
+  top: 4rem;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#scatter-plot #chart {
+  flex: 1;
+}
+
+#scatter-plot svg {
+  width: 100%;
+  height: 100%;
+}
+
+#selection-count {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Slider + files */
+
+#time-filter {
+  margin: 2.5rem 0 1rem;
+}
+
+#time-filter label {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#time-filter input[type="range"] {
+  flex: 1;
+}
+
+#time-filter time {
+  margin-left: auto;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Unit visualization */
+
+#files {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 0.3rem 1.5rem;
+  margin-bottom: 3rem;
+}
+
+#files > div {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+#files dt {
+  grid-column: 1;
+  margin: 0;
+  padding-top: 0.5rem;
+}
+
+#files dt code {
+  font-family: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+
+#files dt small {
+  display: block;
+  font-size: 0.75rem;
+  color: #777;
+}
+
+#files dd {
+  grid-column: 2;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0.15em;
+  padding-top: 0.6em;
+}
+
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+/* Responsive tweak */
+
+@media (max-width: 900px) {
+  #scrolly-1 {
+    flex-direction: column;
+  }
+
+  #scatter-plot {
+    position: static;
+    height: auto;
+  }
+}
+/* ===== Stats Box ===== */
+
+#stats-box {
+  background: #ffffff;
+  border: 1px solid #d5dce5;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: left;
+}
+
+.stat-item dt {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.stat-item dd {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0b4dbb;
+  margin: 0;
+}

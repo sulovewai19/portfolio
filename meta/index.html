@@ -2,20 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Code Meta Analysis</title>
+    <title>Meta Data</title>
 
-    <link rel="stylesheet" href="../style.css">
-    <script type="module" src="main.js"></script>
+    <!-- Re-use your main site styles -->
+    <link rel="stylesheet" href="../style.css" />
   </head>
 
   <body>
-    <h1>Code Meta Analysis</h1>
-    <p>This page visualizes my project’s code statistics using D3.js.</p>
+    <!-- global.js will inject the nav bar -->
+    <h1>Meta Data</h1>
 
-    <div id="stats"></div>
+    <!-- Summary stats -->
+   <div id="stats-box">
+    <div class="stat-item"></div>
+    <div class="stat-item"></div>
+    <div class="stat-item"></div>
+    <div class="stat-item"></div>
+    <div class="stat-item"></div>
+</div>
 
+
+
+    <!-- Scrollytelling + scatter plot -->
     <h2>Commits by Time of Day</h2>
-    <div id="chart"></div>
+    <div id="scrolly-1">
+      <div id="scatter-story">
+        <!-- Commit narrative text will be injected here by JS -->
+      </div>
+
+      <div id="scatter-plot">
+        <div id="chart"></div>
+        <p id="selection-count">No commits selected</p>
+      </div>
+    </div>
+
+    <!-- Time slider + unit visualization of files -->
+    <div id="time-filter">
+      <label for="commit-progress">
+        Show commits until:
+        <input
+          type="range"
+          id="commit-progress"
+          min="0"
+          max="100"
+          value="100"
+        />
+        <time id="commit-time"></time>
+      </label>
+    </div>
+
+    <dl id="files"></dl>
+
+    <!-- Scripts -->
+    <script type="module" src="../global.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
-
